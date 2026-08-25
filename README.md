@@ -24,9 +24,6 @@ ME_Portfolio/
 └── README.md         # Documentación del proyecto
 ```
 
-* **Mantenibilidad total:** No es necesario modificar etiquetas HTML complejas para cambiar proyectos o habilidades; todo se gestiona desde el archivo `js/data.js`.
-* **Cero dependencias pesadas:** Carga instantánea, sin paquetes que caduquen y 100% compatible con GitHub Pages.
-
 ---
 
 ## ✨ Características Principales
@@ -52,25 +49,3 @@ ME_Portfolio/
 * **Tipografías:** Google Fonts (*Plus Jakarta Sans* & *Inter*)
 
 ---
-
-## 📝 Cómo Personalizar tus Datos y Proyectos
-
-Para actualizar cualquier información, simplemente abre el archivo [js/data.js](file:///c:/Users/milagr/Documents/GitHub/ME_Portfolio/js/data.js):
-
-1. **Editar Proyectos:** Ve a la sección `projects: [...]` y modifica el título, descripción, tecnologías o enlaces a GitHub.
-2. **Agregar Habilidades:** Ve a la sección `skills: [...]` y añade o edita tecnologías en la categoría correspondiente.
-3. **Foto de Perfil:** Coloca tu foto en la carpeta `assets/img/` (por ejemplo `assets/img/perfil.jpg`) y en `index.html` reemplaza el bloque `avatar-placeholder` por `<img src="assets/img/perfil.jpg" alt="Milagros Escarlon" class="avatar-img">`.
-
----
-
-## 🌐 Cómo Publicar en GitHub Pages
-
-1. Sube tus cambios a GitHub:
-   ```bash
-   git add .
-   git commit -m "feat: portfolio estructurado con arquitectura modular"
-   git push origin main
-   ```
-2. En GitHub, ve a **Settings** > **Pages**.
-3. En **Build and deployment** > **Source**, selecciona `Deploy from a branch`, rama `main` y carpeta `/ (root)`.
-4. En 1 minuto tu portfolio estará disponible online.
