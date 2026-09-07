@@ -14,7 +14,7 @@ El proyecto implementa una **separación clara entre la capa de datos y la capa 
 ME_Portfolio/
 ├── assets/
 │   ├── docs/         # Archivos de CV y documentos (PDF)
-│   └── img/          # Imágenes de perfil, proyectos y mockups
+│   └── images/          # Imágenes de perfil, proyectos y mockups
 ├── css/
 │   └── style.css     # Sistema de diseño optimizado (Variables CSS y diseño responsive)
 ├── js/
