@@ -93,6 +93,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (badgeDataTitle) badgeDataTitle.textContent = personal.badgeData;
         if (badgeDataSub) badgeDataSub.textContent = personal.badgeDataSub;
 
+        const avatarSlot = document.getElementById('profileAvatarSlot');
+        if (avatarSlot) {
+            if (personal.avatarImage) {
+                avatarSlot.innerHTML = `<img src="${personal.avatarImage}" alt="${personal.name}" class="avatar-photo" loading="eager">`;
+                avatarSlot.classList.add('has-photo');
+            } else {
+                avatarSlot.innerHTML = `
+                    <div class="avatar-icon-wrap"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <span class="avatar-initials">${personal.initials || 'ME'}</span>
+                    <span class="avatar-hint" id="avatarHintText"><i class="fa-solid fa-camera"></i> ${personal.avatarHint}</span>
+                `;
+                avatarSlot.classList.remove('has-photo');
+            }
+        }
+
         if (rolesContainer && personal.roles) {
             rolesContainer.innerHTML = personal.roles
                 .map((role, idx) => `<span class="role-item">${role}</span>${idx < personal.roles.length - 1 ? '<span class="role-separator">•</span>' : ''}`)
@@ -199,20 +214,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (container && projectsList) {
-            container.innerHTML = projectsList.map(proj => `
+            container.innerHTML = projectsList.map(proj => {
+                const isExternalLive = proj.liveLink && proj.liveLink.startsWith('http');
+                return `
                 <article class="project-card" id="${proj.id}">
                     <div class="project-preview">
-                        <div class="project-preview-mockup mockup-${proj.type}">
-                            <div class="mockup-header">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                                <span class="mockup-title">${proj.mockupTitle}</span>
+                        ${proj.image ? `
+                            <img src="${proj.image}" alt="${proj.title}" class="project-img-cover" loading="lazy">
+                        ` : `
+                            <div class="project-preview-mockup mockup-${proj.type}">
+                                <div class="mockup-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                    <span class="mockup-title">${proj.mockupTitle}</span>
+                                </div>
+                                <div class="mockup-content-wrap">
+                                    ${proj.mockupContent}
+                                </div>
                             </div>
-                            <div class="mockup-content-wrap">
-                                ${proj.mockupContent}
-                            </div>
-                        </div>
+                        `}
                         <div class="project-overlay">
                             <a href="${proj.githubLink}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
                                 <i class="fa-brands fa-github"></i> ${proj.viewRepoText}
@@ -233,13 +254,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             <a href="${proj.githubLink}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="${proj.codeText}">
                                 <i class="fa-brands fa-github"></i> ${proj.codeText}
                             </a>
-                            <a href="${proj.liveLink}" class="project-link" aria-label="${proj.liveText}">
+                            <a href="${proj.liveLink}" ${isExternalLive ? 'target="_blank" rel="noopener noreferrer"' : ''} class="project-link" aria-label="${proj.liveText}">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i> ${proj.liveText}
                             </a>
                         </div>
                     </div>
                 </article>
-            `).join('');
+            `;
+            }).join('');
         }
     }
 

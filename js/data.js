@@ -49,7 +49,8 @@ const portfolioData = {
             badgeQASub: "Cypress & Postman",
             badgeData: "Data Analytics",
             badgeDataSub: "Power BI & SQL",
-            avatarHint: "Foto de Perfil"
+            avatarHint: "Foto de Perfil",
+            avatarImage: "assets/images/profile/profilepic1.jpeg"
         },
         about: {
             subtitle: "CONÓCEME MEJOR",
@@ -157,62 +158,74 @@ const portfolioData = {
             }
         ],
         projectsSection: {
-            subtitle: "TRABAJOS Y PRÁCTICAS",
+            subtitle: "TRABAJOS Y DESARROLLOS",
             title: "Proyectos",
-            titleAccent: "Destacados",
-            description: "Selección de proyectos y pruebas de concepto en automatización de pruebas, análisis de datos y desarrollo web."
+            titleAccent: "Web Destacados",
+            description: "Selección de aplicaciones web, plataformas e-commerce y proyectos colaborativos con despliegue en producción."
         },
         projects: [
             {
                 id: "proj-1",
                 number: "01",
-                type: "qa",
-                category: "QA Automation & Testing",
-                title: "Suite de Automatización E2E",
-                description: "Suite de pruebas automatizadas End-to-End implementada con Cypress y JavaScript. Incluye validación de flujos críticos de usuario, aserciones personalizadas, reportes de ejecución y testing de APIs.",
-                tags: ["Cypress", "JavaScript", "Postman", "E2E Testing", "CI/CD"],
-                githubLink: "https://github.com/milagros888",
-                liveLink: "#contact",
+                type: "web",
+                category: "Web App & Productividad",
+                title: "Tu Espacio — App Web Anotador",
+                description: "Aplicación web de notas y productividad con editor de texto enriquecido (Quill.js). Incorpora gestión de temas claro/oscuro, persistencia local de notas, selección dinámica de avatares, modo invitado y diseño modular optimizado con Bootstrap 5.",
+                tags: ["JavaScript ES6+", "Bootstrap 5", "Quill.js", "LocalStorage", "Vercel", "UI/UX"],
+                image: "assets/images/proyectos/tuespacio.png",
+                githubLink: "https://github.com/milagros888/Mediapila_App.Web_Anotador",
+                liveLink: "https://mediapila-app-web-anotador.vercel.app/",
                 codeText: "Código",
-                liveText: "Info / Demo",
+                liveText: "Demo en Vivo",
                 viewRepoText: "Ver Repositorio",
-                mockupTitle: "cypress/e2e/test_suite.cy.js",
+                mockupTitle: "tuespacio-app / editor.js",
                 mockupContent: `
-                    <code><span class="c-keyword">describe</span>(<span class="c-str">'E2E Test Flow'</span>, () => {</code>
-                    <code>  <span class="c-keyword">it</span>(<span class="c-str">'should pass assertion'</span>, () => {</code>
-                    <code>    cy.<span class="c-fn">visit</span>(<span class="c-str">'/app'</span>);</code>
-                    <code>    cy.<span class="c-fn">get</span>(<span class="c-str">'[data-testid=submit]'</span>).<span class="c-fn">click</span>();</code>
-                    <code>    cy.<span class="c-fn">contains</span>(<span class="c-str">'Success'</span>).<span class="c-fn">should</span>(<span class="c-str">'be.visible'</span>);</code>
-                    <code>  });</code>
-                    <code>});</code>
+                    <div class="mockup-notes-visual">
+                        <div class="notes-toolbar">
+                            <span class="note-tool-pill">B</span>
+                            <span class="note-tool-pill"><i>I</i></span>
+                            <span class="note-tool-pill"><u>U</u></span>
+                            <span class="note-theme-badge"><i class="fa-solid fa-moon"></i></span>
+                        </div>
+                        <div class="notes-body-preview">
+                            <div class="note-item-preview">
+                                <span class="note-title-line">📝 Mi lista de tareas & notas</span>
+                                <span class="note-desc-line">Editor enriquecido Quill.js y persistencia...</span>
+                            </div>
+                        </div>
+                    </div>
                 `
             },
             {
                 id: "proj-2",
                 number: "02",
-                type: "data",
-                category: "Data Analytics & BI",
-                title: "Dashboard de Métricas & KPIs",
-                description: "Tablero analítico e interactivo desarrollado en Power BI con modelado relacional en SQL y fórmulas DAX avanzadas para visualización de KPIs comerciales y toma de decisiones estratégicas.",
-                tags: ["Power BI", "DAX", "SQL Server", "MySQL", "Excel"],
-                githubLink: "https://github.com/milagros888",
-                liveLink: "#contact",
+                type: "ecommerce",
+                category: "E-Commerce & Colaboración ITBA",
+                title: "Hermanos Jota — Catálogo de Diseño",
+                description: "Sitio web comercial y catálogo interactivo de mobiliario de autor desarrollado en equipo colaborativo (ITBA). Incluye maquetación responsive estructurada con Bootstrap 5, catálogo detallado de productos, formulario de contacto y despliegue continuo en Vercel.",
+                tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Vercel", "Colaborativo"],
+                image: "assets/images/proyectos/hermanosjota.png",
+                githubLink: "https://github.com/valenap-utn/hermanos-jota-itba-2026",
+                liveLink: "https://hermanos-jota-itba-web.vercel.app/",
                 codeText: "Código",
-                liveText: "Ver Dashboard",
+                liveText: "Demo en Vivo",
                 viewRepoText: "Ver Repositorio",
-                mockupTitle: "PowerBI / Dashboard_Analytics.pbix",
+                mockupTitle: "hermanos-jota / catalogo.html",
                 mockupContent: `
-                    <div class="mockup-chart-visual">
-                        <div class="chart-bars">
-                            <div class="bar" style="height: 45%;"></div>
-                            <div class="bar" style="height: 75%;"></div>
-                            <div class="bar" style="height: 60%;"></div>
-                            <div class="bar" style="height: 90%;"></div>
-                            <div class="bar" style="height: 70%;"></div>
+                    <div class="mockup-ecommerce-visual">
+                        <div class="ecom-banner">
+                            <span class="ecom-badge">Hermanos Jota</span>
+                            <span class="ecom-hero-text">Redescubrir el arte de vivir</span>
                         </div>
-                        <div class="chart-legend">
-                            <span><i class="fa-solid fa-circle" style="color: #2563eb;"></i> Métricas KPI</span>
-                            <span><i class="fa-solid fa-circle" style="color: #60a5fa;"></i> Tendencia</span>
+                        <div class="ecom-cards">
+                            <div class="ecom-card">
+                                <div class="ecom-thumb"><i class="fa-solid fa-couch"></i></div>
+                                <span class="ecom-label">Mobiliario</span>
+                            </div>
+                            <div class="ecom-card">
+                                <div class="ecom-thumb"><i class="fa-solid fa-chair"></i></div>
+                                <span class="ecom-label">Colección</span>
+                            </div>
                         </div>
                     </div>
                 `
@@ -220,48 +233,26 @@ const portfolioData = {
             {
                 id: "proj-3",
                 number: "03",
-                type: "web",
-                category: "Fullstack Development",
-                title: "Plataforma Web Interactiva",
-                description: "Aplicación web completa construida con React en el frontend y Node.js con MongoDB en el backend. Integra arquitectura REST, autenticación segura y diseño adaptable a cualquier dispositivo.",
-                tags: ["React.js", "Node.js", "JavaScript", "MongoDB", "CSS3"],
-                githubLink: "https://github.com/milagros888",
-                liveLink: "#contact",
-                codeText: "Código",
-                liveText: "Demo en Vivo",
-                viewRepoText: "Ver Repositorio",
-                mockupTitle: "React App - Fullstack Platform",
-                mockupContent: `
-                    <div class="mockup-web-interface">
-                        <div class="ui-sidebar"></div>
-                        <div class="ui-content">
-                            <div class="ui-card-sm"></div>
-                            <div class="ui-card-sm"></div>
-                            <div class="ui-card-lg"></div>
-                        </div>
-                    </div>
-                `
-            },
-            {
-                id: "proj-4",
-                number: "04",
                 type: "frontend",
-                category: "Frontend & UI Design",
-                title: "Landing Page Moderna IT",
-                description: "Sitio web landing de alto rendimiento optimizado para SEO y velocidad de carga. Desarrollado con HTML5 semántico, CSS3 moderno con variables dinámicas, animaciones y micro-interacciones.",
-                tags: ["HTML5", "CSS3", "JavaScript", "UI/UX", "Responsive"],
-                githubLink: "https://github.com/milagros888",
-                liveLink: "#contact",
+                category: "Frontend & Responsive Web",
+                title: "Pastelería Suspiro — Web Comercial",
+                description: "Sitio web comercial y vidriera digital para pastelería artesanal creado en el marco del programa Mediapila. Cuenta con carrusel dinámico de productos destacados, diseño mobile-first con Bootstrap 5, tipografía personalizada y despliegue en Netlify.",
+                tags: ["HTML5 Semántico", "CSS3", "JavaScript", "Bootstrap 5", "Netlify", "Responsive"],
+                image: "assets/images/proyectos/suspiro.png",
+                githubLink: "https://github.com/milagros888/Mediapila_Web.cliente",
+                liveLink: "https://panaderia-suspiro.netlify.app/",
                 codeText: "Código",
                 liveText: "Ver Sitio",
                 viewRepoText: "Ver Repositorio",
-                mockupTitle: "Landing Page - UI/UX Design",
+                mockupTitle: "panaderia-suspiro / index.html",
                 mockupContent: `
-                    <div class="mockup-landing-visual">
-                        <div class="landing-hero-bar"></div>
-                        <div class="landing-grid-cards">
-                            <div class="grid-box"></div>
-                            <div class="grid-box"></div>
+                    <div class="mockup-bakery-visual">
+                        <div class="bakery-header-bar">
+                            <span class="bakery-brand"><i class="fa-solid fa-cake-candles"></i> Pastelería Suspiro</span>
+                        </div>
+                        <div class="bakery-carousel-preview">
+                            <div class="cake-pill"><i class="fa-solid fa-cookie-bite"></i> Tortas Artesanales</div>
+                            <div class="cake-pill"><i class="fa-solid fa-heart"></i> Especialidades</div>
                         </div>
                     </div>
                 `
@@ -390,7 +381,8 @@ const portfolioData = {
             badgeQASub: "Cypress & Postman",
             badgeData: "Data Analytics",
             badgeDataSub: "Power BI & SQL",
-            avatarHint: "Profile Picture"
+            avatarHint: "Profile Picture",
+            avatarImage: "assets/images/profile/profilepic1.jpeg"
         },
         about: {
             subtitle: "GET TO KNOW ME",
@@ -498,62 +490,74 @@ const portfolioData = {
             }
         ],
         projectsSection: {
-            subtitle: "RECENT WORK & PRACTICE",
+            subtitle: "RECENT WORK & DEVELOPMENTS",
             title: "Featured",
-            titleAccent: "Projects",
-            description: "Curated selection of projects and proof-of-concepts in test automation, business intelligence dashboards, and fullstack web applications."
+            titleAccent: "Web Projects",
+            description: "Curated selection of web applications, e-commerce platforms, and collaborative projects deployed to production."
         },
         projects: [
             {
                 id: "proj-1",
                 number: "01",
-                type: "qa",
-                category: "QA Automation & Testing",
-                title: "E2E Automation Test Suite",
-                description: "End-to-End automated testing suite implemented with Cypress and JavaScript. Includes critical user flow validation, custom assertions, test execution reporting, and API testing integration.",
-                tags: ["Cypress", "JavaScript", "Postman", "E2E Testing", "CI/CD"],
-                githubLink: "https://github.com/milagros888",
-                liveLink: "#contact",
+                type: "web",
+                category: "Web App & Productivity",
+                title: "Tu Espacio — Web Notes App",
+                description: "Interactive note-taking and productivity web application featuring a rich-text editor (Quill.js). Includes light/dark theme switching, local storage persistence, customizable user avatars, guest mode, and a responsive Bootstrap 5 interface.",
+                tags: ["JavaScript ES6+", "Bootstrap 5", "Quill.js", "LocalStorage", "Vercel", "UI/UX"],
+                image: "assets/images/proyectos/tuespacio.png",
+                githubLink: "https://github.com/milagros888/Mediapila_App.Web_Anotador",
+                liveLink: "https://mediapila-app-web-anotador.vercel.app/",
                 codeText: "Code",
-                liveText: "Info / Demo",
+                liveText: "Live Demo",
                 viewRepoText: "View Repository",
-                mockupTitle: "cypress/e2e/test_suite.cy.js",
+                mockupTitle: "tuespacio-app / editor.js",
                 mockupContent: `
-                    <code><span class="c-keyword">describe</span>(<span class="c-str">'E2E Test Flow'</span>, () => {</code>
-                    <code>  <span class="c-keyword">it</span>(<span class="c-str">'should pass assertion'</span>, () => {</code>
-                    <code>    cy.<span class="c-fn">visit</span>(<span class="c-str">'/app'</span>);</code>
-                    <code>    cy.<span class="c-fn">get</span>(<span class="c-str">'[data-testid=submit]'</span>).<span class="c-fn">click</span>();</code>
-                    <code>    cy.<span class="c-fn">contains</span>(<span class="c-str">'Success'</span>).<span class="c-fn">should</span>(<span class="c-str">'be.visible'</span>);</code>
-                    <code>  });</code>
-                    <code>});</code>
+                    <div class="mockup-notes-visual">
+                        <div class="notes-toolbar">
+                            <span class="note-tool-pill">B</span>
+                            <span class="note-tool-pill"><i>I</i></span>
+                            <span class="note-tool-pill"><u>U</u></span>
+                            <span class="note-theme-badge"><i class="fa-solid fa-moon"></i></span>
+                        </div>
+                        <div class="notes-body-preview">
+                            <div class="note-item-preview">
+                                <span class="note-title-line">📝 Notes & Tasks List</span>
+                                <span class="note-desc-line">Quill.js rich text editor with local persistence...</span>
+                            </div>
+                        </div>
+                    </div>
                 `
             },
             {
                 id: "proj-2",
                 number: "02",
-                type: "data",
-                category: "Data Analytics & BI",
-                title: "Business KPI Analytics Dashboard",
-                description: "Interactive analytics dashboard built in Power BI with relational SQL data modeling (MySQL / SQL Server) and advanced DAX formulas for strategic KPI visualization and business decision making.",
-                tags: ["Power BI", "DAX", "SQL Server", "MySQL", "Excel"],
-                githubLink: "https://github.com/milagros888",
-                liveLink: "#contact",
+                type: "ecommerce",
+                category: "E-Commerce & ITBA Collaboration",
+                title: "Hermanos Jota — Design Catalog",
+                description: "Commercial website and interactive design catalog for author furniture developed collaboratively in a team project (ITBA). Features modular layouts built with Bootstrap 5, product showcase, contact form, and continuous deployment on Vercel.",
+                tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Vercel", "Collaborative"],
+                image: "assets/images/proyectos/hermanosjota.png",
+                githubLink: "https://github.com/valenap-utn/hermanos-jota-itba-2026",
+                liveLink: "https://hermanos-jota-itba-web.vercel.app/",
                 codeText: "Code",
-                liveText: "View Dashboard",
+                liveText: "Live Demo",
                 viewRepoText: "View Repository",
-                mockupTitle: "PowerBI / Dashboard_Analytics.pbix",
+                mockupTitle: "hermanos-jota / catalogo.html",
                 mockupContent: `
-                    <div class="mockup-chart-visual">
-                        <div class="chart-bars">
-                            <div class="bar" style="height: 45%;"></div>
-                            <div class="bar" style="height: 75%;"></div>
-                            <div class="bar" style="height: 60%;"></div>
-                            <div class="bar" style="height: 90%;"></div>
-                            <div class="bar" style="height: 70%;"></div>
+                    <div class="mockup-ecommerce-visual">
+                        <div class="ecom-banner">
+                            <span class="ecom-badge">Hermanos Jota</span>
+                            <span class="ecom-hero-text">Redescubrir el arte de vivir</span>
                         </div>
-                        <div class="chart-legend">
-                            <span><i class="fa-solid fa-circle" style="color: #2563eb;"></i> KPI Metrics</span>
-                            <span><i class="fa-solid fa-circle" style="color: #60a5fa;"></i> Trend</span>
+                        <div class="ecom-cards">
+                            <div class="ecom-card">
+                                <div class="ecom-thumb"><i class="fa-solid fa-couch"></i></div>
+                                <span class="ecom-label">Furniture</span>
+                            </div>
+                            <div class="ecom-card">
+                                <div class="ecom-thumb"><i class="fa-solid fa-chair"></i></div>
+                                <span class="ecom-label">Collection</span>
+                            </div>
                         </div>
                     </div>
                 `
@@ -561,48 +565,26 @@ const portfolioData = {
             {
                 id: "proj-3",
                 number: "03",
-                type: "web",
-                category: "Fullstack Development",
-                title: "Interactive Web Platform",
-                description: "Fullstack web application built with React on the frontend and Node.js with MongoDB on the backend. Features REST API architecture, secure authentication, and fully responsive UI.",
-                tags: ["React.js", "Node.js", "JavaScript", "MongoDB", "CSS3"],
-                githubLink: "https://github.com/milagros888",
-                liveLink: "#contact",
-                codeText: "Code",
-                liveText: "Live Demo",
-                viewRepoText: "View Repository",
-                mockupTitle: "React App - Fullstack Platform",
-                mockupContent: `
-                    <div class="mockup-web-interface">
-                        <div class="ui-sidebar"></div>
-                        <div class="ui-content">
-                            <div class="ui-card-sm"></div>
-                            <div class="ui-card-sm"></div>
-                            <div class="ui-card-lg"></div>
-                        </div>
-                    </div>
-                `
-            },
-            {
-                id: "proj-4",
-                number: "04",
                 type: "frontend",
-                category: "Frontend & UI Design",
-                title: "Modern Tech Landing Page",
-                description: "High-performance landing page optimized for SEO and fast loading speed. Crafted with semantic HTML5, modern CSS3 variables, micro-interactions, and mobile-first responsive layout.",
-                tags: ["HTML5", "CSS3", "JavaScript", "UI/UX", "Responsive"],
-                githubLink: "https://github.com/milagros888",
-                liveLink: "#contact",
+                category: "Frontend & Responsive Web",
+                title: "Pastelería Suspiro — Commercial Website",
+                description: "Commercial showcase website for an artisanal bakery created within the Mediapila initiative. Features a dynamic carousel for featured pastries, mobile-first responsive layout with Bootstrap 5, custom typography, and deployment on Netlify.",
+                tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Netlify", "Mobile First"],
+                image: "assets/images/proyectos/suspiro.png",
+                githubLink: "https://github.com/milagros888/Mediapila_Web.cliente",
+                liveLink: "https://panaderia-suspiro.netlify.app/",
                 codeText: "Code",
                 liveText: "View Site",
                 viewRepoText: "View Repository",
-                mockupTitle: "Landing Page - UI/UX Design",
+                mockupTitle: "panaderia-suspiro / index.html",
                 mockupContent: `
-                    <div class="mockup-landing-visual">
-                        <div class="landing-hero-bar"></div>
-                        <div class="landing-grid-cards">
-                            <div class="grid-box"></div>
-                            <div class="grid-box"></div>
+                    <div class="mockup-bakery-visual">
+                        <div class="bakery-header-bar">
+                            <span class="bakery-brand"><i class="fa-solid fa-cake-candles"></i> Pastelería Suspiro</span>
+                        </div>
+                        <div class="bakery-carousel-preview">
+                            <div class="cake-pill"><i class="fa-solid fa-cookie-bite"></i> Artisanal Cakes</div>
+                            <div class="cake-pill"><i class="fa-solid fa-heart"></i> Specialties</div>
                         </div>
                     </div>
                 `

@@ -556,12 +556,13 @@ textarea {
     background: var(--bg-card);
     border: 2px solid var(--border-card);
     border-radius: var(--radius-lg);
-    padding: 16px;
+    padding: 12px;
     box-shadow: var(--shadow-lg);
     aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .avatar-placeholder {
@@ -576,6 +577,28 @@ textarea {
     justify-content: center;
     gap: 8px;
     color: var(--accent-primary);
+    overflow: hidden;
+}
+
+.avatar-placeholder.has-photo {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.avatar-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+}
+
+.avatar-card:hover .avatar-photo {
+    transform: scale(1.04);
 }
 
 .avatar-icon-wrap {
@@ -901,11 +924,12 @@ textarea {
 
 .project-preview {
     position: relative;
-    height: 190px;
+    height: 200px;
     background: #0f172a;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .project-preview-mockup {
@@ -1003,61 +1027,181 @@ textarea {
     color: #94a3b8;
 }
 
-.mockup-web-interface {
+.project-img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img-cover {
+    transform: scale(1.05);
+}
+
+/* UI Mockup - Notes / Anotador */
+.mockup-notes-visual {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+.notes-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #0f172a;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+.note-tool-pill {
+    background: #334155;
+    color: #94a3b8;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+.note-theme-badge {
+    margin-left: auto;
+    color: #f59e0b;
+    font-size: 10px;
+}
+
+.notes-body-preview {
+    background: #0f172a;
+    border: 1px dashed #334155;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.note-item-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.note-title-line {
+    color: #38bdf8;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.note-desc-line {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+/* UI Mockup - E-Commerce / Hermanos Jota */
+.mockup-ecommerce-visual {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+.ecom-banner {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border: 1px solid #334155;
+    border-radius: 4px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ecom-badge {
+    background: #d97706;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.ecom-hero-text {
+    color: #cbd5e1;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.ecom-cards {
     display: flex;
     gap: 8px;
-    height: 100%;
 }
 
-.ui-sidebar {
-    width: 25%;
-    background: #334155;
-    border-radius: 4px;
-}
-
-.ui-content {
+.ecom-card {
     flex: 1;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    padding: 6px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 6px;
 }
 
-.ui-card-sm {
-    height: 18px;
-    background: #334155;
+.ecom-thumb {
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
-}
-
-.ui-card-lg {
-    flex: 1;
     background: #2563eb;
-    opacity: 0.7;
-    border-radius: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
 }
 
-.mockup-landing-visual {
+.ecom-label {
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+/* UI Mockup - Bakery / Pastelería Suspiro */
+.mockup-bakery-visual {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+    justify-content: center;
 }
 
-.landing-hero-bar {
-    height: 32px;
-    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+.bakery-header-bar {
+    background: linear-gradient(90deg, #be123c, #f43f5e);
     border-radius: 4px;
+    padding: 6px 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
 }
 
-.landing-grid-cards {
+.bakery-carousel-preview {
     display: flex;
     gap: 6px;
-    flex: 1;
 }
 
-.grid-box {
+.cake-pill {
     flex: 1;
-    background: #334155;
+    background: #0f172a;
+    border: 1px solid #334155;
     border-radius: 4px;
+    padding: 6px 8px;
+    color: #fbcfe8;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cake-pill i {
+    color: #f43f5e;
 }
 
 .project-overlay {
