@@ -35,7 +35,7 @@ ME_Portfolio/
   * **Hero:** Presentación profesional con badges dinámicos de *QA Automation* y *Data Analytics*, descarga directa de CV y redes.
   * **Sobre Mí:** Formación técnica, enfoque profesional y datos clave.
   * **Habilidades:** Categorías organizadas (*QA & Testing*, *Data Analysis*, *Desarrollo Web*, *Soporte & Métodos*).
-  * **Proyectos (4 Muestras Listas):** Tarjetas dinámicas con previsualizaciones interactivas de código y dashboards.
+  * **Proyectos Destacados:** Tarjetas interactivas con previsualizaciones reales, mockups de código en Cypress y enlaces directos a repositorios y demos en producción (QA Automation & Web Development).
   * **Educación y Certificaciones:** Trayectoria académica (UTN, EducacionIT, XAcademy, Mediapila, Daxus Latam, E.E.S.T. N°8).
   * **Contacto:** Canales directos y formulario funcional interactivo con mensajes adaptados al idioma.
 

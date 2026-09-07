@@ -160,8 +160,8 @@ const portfolioData = {
         projectsSection: {
             subtitle: "TRABAJOS Y DESARROLLOS",
             title: "Proyectos",
-            titleAccent: "Web Destacados",
-            description: "Selección de aplicaciones web, plataformas e-commerce y proyectos colaborativos con despliegue en producción."
+            titleAccent: "Destacados",
+            description: "Selección de proyectos en desarrollo web, aplicaciones interactivas y suites de automatización de pruebas QA con Cypress."
         },
         projects: [
             {
@@ -199,6 +199,31 @@ const portfolioData = {
             {
                 id: "proj-2",
                 number: "02",
+                type: "qa",
+                category: "QA Automation & E2E Testing",
+                title: "Suite E2E Shady Meadows — QA Challenge",
+                description: "Suite de pruebas automatizadas End-to-End con Cypress y JavaScript sobre el sistema de reservas Shady Meadows B&B (XAcademy). Diseñada bajo principios de Test Isolation, incluye validación de calendarios dinámicos, formularios de contacto, códigos de estado HTTP, matrices de casos de prueba y reporte de bugs en Trello.",
+                tags: ["Cypress", "JavaScript", "E2E Testing", "Test Isolation", "Trello", "QA Automation"],
+                image: "assets/images/proyectos/automation.jpg",
+                githubLink: "https://github.com/milagros888/QA_XAcademy_Challenge",
+                liveLink: "https://automationintesting.online/",
+                codeText: "Código",
+                liveText: "App Testeada",
+                viewRepoText: "Ver Repositorio",
+                mockupTitle: "cypress/e2e/booking_flow.cy.js",
+                mockupContent: `
+                    <code><span class="c-keyword">describe</span>(<span class="c-str">'Shady Meadows - Booking E2E'</span>, () => {</code>
+                    <code>  <span class="c-keyword">it</span>(<span class="c-str">'should book room with dynamic dates'</span>, () => {</code>
+                    <code>    cy.<span class="c-fn">visit</span>(<span class="c-str">'/automationintesting'</span>);</code>
+                    <code>    cy.<span class="c-fn">get</span>(<span class="c-str">'.btn-book-room'</span>).<span class="c-fn">click</span>();</code>
+                    <code>    cy.<span class="c-fn">contains</span>(<span class="c-str">'Booking confirmed'</span>).<span class="c-fn">should</span>(<span class="c-str">'be.visible'</span>);</code>
+                    <code>  });</code>
+                    <code>});</code>
+                `
+            },
+            {
+                id: "proj-3",
+                number: "03",
                 type: "ecommerce",
                 category: "E-Commerce & Colaboración ITBA",
                 title: "Hermanos Jota — Catálogo de Diseño",
@@ -231,8 +256,34 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-3",
-                number: "03",
+                id: "proj-4",
+                number: "04",
+                type: "qa",
+                category: "QA Automation & Framework",
+                title: "Cypress Testing Framework & Prácticas",
+                description: "Repositorio modular de arquitectura y desarrollo de pruebas automatizadas con Cypress y JavaScript en XAcademy. Implementa Custom Commands reutilizables, pruebas basadas en datos (Data-Driven Testing con Fixtures), aserciones avanzadas y control de versiones con Git.",
+                tags: ["Cypress", "JavaScript", "Custom Commands", "Fixtures", "Data-Driven", "QA Framework"],
+                image: "assets/images/proyectos/automation.jpg",
+                githubLink: "https://github.com/milagros888/QA_XAcademy_2026",
+                liveLink: "https://github.com/milagros888/QA_XAcademy_2026#readme",
+                codeText: "Código",
+                liveText: "Documentación",
+                viewRepoText: "Ver Repositorio",
+                mockupTitle: "cypress/e2e/custom_commands.cy.js",
+                mockupContent: `
+                    <code><span class="c-keyword">describe</span>(<span class="c-str">'Data-Driven & Custom Commands'</span>, () => {</code>
+                    <code>  <span class="c-keyword">it</span>(<span class="c-str">'should validate flow with fixtures'</span>, () => {</code>
+                    <code>    cy.<span class="c-fn">fixture</span>(<span class="c-str">'userData'</span>).<span class="c-fn">then</span>((data) => {</code>
+                    <code>      cy.<span class="c-fn">loginUser</span>(data.validUser);</code>
+                    <code>      cy.<span class="c-fn">get</span>(<span class="c-str">'#dashboard'</span>).<span class="c-fn">should</span>(<span class="c-str">'exist'</span>);</code>
+                    <code>    });</code>
+                    <code>  });</code>
+                    <code>});</code>
+                `
+            },
+            {
+                id: "proj-5",
+                number: "05",
                 type: "frontend",
                 category: "Frontend & Responsive Web",
                 title: "Pastelería Suspiro — Web Comercial",
@@ -492,8 +543,8 @@ const portfolioData = {
         projectsSection: {
             subtitle: "RECENT WORK & DEVELOPMENTS",
             title: "Featured",
-            titleAccent: "Web Projects",
-            description: "Curated selection of web applications, e-commerce platforms, and collaborative projects deployed to production."
+            titleAccent: "Projects",
+            description: "Curated selection of web applications, e-commerce platforms, and automated QA testing suites built with Cypress."
         },
         projects: [
             {
@@ -531,6 +582,31 @@ const portfolioData = {
             {
                 id: "proj-2",
                 number: "02",
+                type: "qa",
+                category: "QA Automation & E2E Testing",
+                title: "Shady Meadows E2E Suite — QA Challenge",
+                description: "End-to-End automated testing suite implemented with Cypress and JavaScript for the Shady Meadows B&B booking system (XAcademy). Built on Test Isolation principles, covering dynamic date pickers, contact forms, HTTP status validation, test cases matrix, and bug tracking on Trello.",
+                tags: ["Cypress", "JavaScript", "E2E Testing", "Test Isolation", "Trello", "QA Automation"],
+                image: "assets/images/proyectos/automation.jpg",
+                githubLink: "https://github.com/milagros888/QA_XAcademy_Challenge",
+                liveLink: "https://automationintesting.online/",
+                codeText: "Code",
+                liveText: "Tested App",
+                viewRepoText: "View Repository",
+                mockupTitle: "cypress/e2e/booking_flow.cy.js",
+                mockupContent: `
+                    <code><span class="c-keyword">describe</span>(<span class="c-str">'Shady Meadows - Booking E2E'</span>, () => {</code>
+                    <code>  <span class="c-keyword">it</span>(<span class="c-str">'should book room with dynamic dates'</span>, () => {</code>
+                    <code>    cy.<span class="c-fn">visit</span>(<span class="c-str">'/automationintesting'</span>);</code>
+                    <code>    cy.<span class="c-fn">get</span>(<span class="c-str">'.btn-book-room'</span>).<span class="c-fn">click</span>();</code>
+                    <code>    cy.<span class="c-fn">contains</span>(<span class="c-str">'Booking confirmed'</span>).<span class="c-fn">should</span>(<span class="c-str">'be.visible'</span>);</code>
+                    <code>  });</code>
+                    <code>});</code>
+                `
+            },
+            {
+                id: "proj-3",
+                number: "03",
                 type: "ecommerce",
                 category: "E-Commerce & ITBA Collaboration",
                 title: "Hermanos Jota — Design Catalog",
@@ -563,8 +639,34 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-3",
-                number: "03",
+                id: "proj-4",
+                number: "04",
+                type: "qa",
+                category: "QA Automation & Framework",
+                title: "Cypress Testing Framework & Learning Path",
+                description: "Automated testing development repository and framework built with Cypress and JavaScript at XAcademy. Implements reusable Custom Commands, Data-Driven Testing with Fixtures, advanced assertions, and Git version control workflows.",
+                tags: ["Cypress", "JavaScript", "Custom Commands", "Fixtures", "Data-Driven", "QA Framework"],
+                image: "assets/images/proyectos/automation.jpg",
+                githubLink: "https://github.com/milagros888/QA_XAcademy_2026",
+                liveLink: "https://github.com/milagros888/QA_XAcademy_2026#readme",
+                codeText: "Code",
+                liveText: "Documentation",
+                viewRepoText: "View Repository",
+                mockupTitle: "cypress/e2e/custom_commands.cy.js",
+                mockupContent: `
+                    <code><span class="c-keyword">describe</span>(<span class="c-str">'Data-Driven & Custom Commands'</span>, () => {</code>
+                    <code>  <span class="c-keyword">it</span>(<span class="c-str">'should validate flow with fixtures'</span>, () => {</code>
+                    <code>    cy.<span class="c-fn">fixture</span>(<span class="c-str">'userData'</span>).<span class="c-fn">then</span>((data) => {</code>
+                    <code>      cy.<span class="c-fn">loginUser</span>(data.validUser);</code>
+                    <code>      cy.<span class="c-fn">get</span>(<span class="c-str">'#dashboard'</span>).<span class="c-fn">should</span>(<span class="c-str">'exist'</span>);</code>
+                    <code>    });</code>
+                    <code>  });</code>
+                    <code>});</code>
+                `
+            },
+            {
+                id: "proj-5",
+                number: "05",
                 type: "frontend",
                 category: "Frontend & Responsive Web",
                 title: "Pastelería Suspiro — Commercial Website",
