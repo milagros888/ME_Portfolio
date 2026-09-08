@@ -161,12 +161,37 @@ const portfolioData = {
             subtitle: "TRABAJOS Y DESARROLLOS",
             title: "Proyectos",
             titleAccent: "Destacados",
-            description: "Selección de proyectos en desarrollo web, aplicaciones interactivas y suites de automatización de pruebas QA con Cypress."
+            description: "Selección de aplicaciones fullstack MERN, plataformas web interactivas y suites de automatización de pruebas QA con Cypress."
         },
         projects: [
             {
                 id: "proj-1",
                 number: "01",
+                type: "fullstack",
+                category: "Fullstack MERN & React",
+                title: "TicketApp — Venta de Entradas & Admin Hub",
+                description: "Plataforma fullstack de venta de entradas y gestión de estadios para el Mundial 2026. Desarrollada en equipo (Mediapila) con React + Vite en el frontend, selección visual de butacas por sectores, checkout guiado y panel administrativo con métricas en tiempo real (Chart.js). Backend REST en Node.js/Express alojado en Render con base de datos MongoDB y despliegue en Vercel.",
+                tags: ["React.js", "Node.js", "Express", "MongoDB", "Render", "Vercel", "Chart.js", "Fullstack"],
+                image: "assets/images/proyectos/ticketapp.png",
+                githubLink: "https://github.com/milagros888/Mediapila_TicketApp",
+                liveLink: "https://mediapila-ticket-app.vercel.app/",
+                codeText: "Código",
+                liveText: "Demo en Vivo",
+                viewRepoText: "Ver Repositorio",
+                mockupTitle: "ticketapp / src/App.jsx",
+                mockupContent: `
+                    <div class="mockup-web-interface">
+                        <div class="ui-sidebar"></div>
+                        <div class="ui-content">
+                            <div class="ui-card-sm"></div>
+                            <div class="ui-card-lg"></div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: "proj-2",
+                number: "02",
                 type: "web",
                 category: "Web App & Productividad",
                 title: "Tu Espacio — App Web Anotador",
@@ -197,8 +222,8 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-2",
-                number: "02",
+                id: "proj-3",
+                number: "03",
                 type: "qa",
                 category: "QA Automation & E2E Testing",
                 title: "Suite E2E Shady Meadows — QA Challenge",
@@ -222,8 +247,8 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-3",
-                number: "03",
+                id: "proj-4",
+                number: "04",
                 type: "ecommerce",
                 category: "E-Commerce & Colaboración ITBA",
                 title: "Hermanos Jota — Catálogo de Diseño",
@@ -256,8 +281,8 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-4",
-                number: "04",
+                id: "proj-5",
+                number: "05",
                 type: "qa",
                 category: "QA Automation & Framework",
                 title: "Cypress Testing Framework & Prácticas",
@@ -282,8 +307,8 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-5",
-                number: "05",
+                id: "proj-6",
+                number: "06",
                 type: "frontend",
                 category: "Frontend & Responsive Web",
                 title: "Pastelería Suspiro — Web Comercial",
@@ -544,12 +569,37 @@ const portfolioData = {
             subtitle: "RECENT WORK & DEVELOPMENTS",
             title: "Featured",
             titleAccent: "Projects",
-            description: "Curated selection of web applications, e-commerce platforms, and automated QA testing suites built with Cypress."
+            description: "Curated selection of fullstack MERN applications, interactive web platforms, and automated QA testing suites built with Cypress."
         },
         projects: [
             {
                 id: "proj-1",
                 number: "01",
+                type: "fullstack",
+                category: "Fullstack MERN & React",
+                title: "TicketApp — Ticketing Platform & Admin Hub",
+                description: "Fullstack ticketing and stadium management platform for World Cup 2026 matches. Features a reactive React + Vite frontend with interactive seat selection map, checkout stepper, and admin dashboard with real-time KPI analytics (Chart.js). Backend REST API in Node.js/Express hosted on Render, MongoDB database, and frontend deployed on Vercel.",
+                tags: ["React.js", "Node.js", "Express", "MongoDB", "Render", "Vercel", "Chart.js", "Fullstack"],
+                image: "assets/images/proyectos/ticketapp.png",
+                githubLink: "https://github.com/milagros888/Mediapila_TicketApp",
+                liveLink: "https://mediapila-ticket-app.vercel.app/",
+                codeText: "Code",
+                liveText: "Live Demo",
+                viewRepoText: "View Repository",
+                mockupTitle: "ticketapp / src/App.jsx",
+                mockupContent: `
+                    <div class="mockup-web-interface">
+                        <div class="ui-sidebar"></div>
+                        <div class="ui-content">
+                            <div class="ui-card-sm"></div>
+                            <div class="ui-card-lg"></div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: "proj-2",
+                number: "02",
                 type: "web",
                 category: "Web App & Productivity",
                 title: "Tu Espacio — Web Notes App",
@@ -580,8 +630,8 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-2",
-                number: "02",
+                id: "proj-3",
+                number: "03",
                 type: "qa",
                 category: "QA Automation & E2E Testing",
                 title: "Shady Meadows E2E Suite — QA Challenge",
@@ -605,8 +655,8 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-3",
-                number: "03",
+                id: "proj-4",
+                number: "04",
                 type: "ecommerce",
                 category: "E-Commerce & ITBA Collaboration",
                 title: "Hermanos Jota — Design Catalog",
@@ -639,8 +689,8 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-4",
-                number: "04",
+                id: "proj-5",
+                number: "05",
                 type: "qa",
                 category: "QA Automation & Framework",
                 title: "Cypress Testing Framework & Learning Path",
@@ -665,8 +715,8 @@ const portfolioData = {
                 `
             },
             {
-                id: "proj-5",
-                number: "05",
+                id: "proj-6",
+                number: "06",
                 type: "frontend",
                 category: "Frontend & Responsive Web",
                 title: "Pastelería Suspiro — Commercial Website",
